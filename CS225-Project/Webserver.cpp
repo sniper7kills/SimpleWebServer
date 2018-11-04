@@ -4,8 +4,6 @@
 #include "Request.h"
 #include "Response.h"
 #include "FileReader.h"
-#include <bitset>
-#include <stdio.h>
 
 using namespace std;
 
@@ -176,7 +174,7 @@ void Webserver::run()
 				else
 				{
 
-					//add null character, if you want to use with printf/puts or other string handling functions
+					//Better Error Handeling needs to be added instead of just catching strings.....
 					try {
 						Request request(buffer);
 						cout << request.fileRequested() << endl;
