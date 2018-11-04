@@ -7,7 +7,7 @@ FileReader::FileReader(string filename)
 		this->fileStream.open(this->filename.c_str(), fstream::in);
 	}
 	catch (...) {
-		throw "ERROR OPENING FILE...";
+		throw(string("UNKNOWN ERROR OPENING FILE..."));
 	}
 	if (this->fileStream.fail()) {
 		throw(string("FILE COULD NOT BE OPENED!"));
